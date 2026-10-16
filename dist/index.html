@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body>
+    <h1 class="text-2xl text-center font-semibold">Increment / Decrement </h1>
+
+    <div class="flex flex-col items-center justify-center ">
+
+        <h2 id="count" class="px-3 py-1 rounded-lg mt-4 ">0 </h2>
+        <!-- Increment/Decrement -->
+        <div class="space-x-4 p-10 ">
+            <button id="minusBtn"
+                class="bg-red-600 py-1 px-2 rounded-2xl text-white font-medium hover:cursor-pointer active:bg-red-500 transition text-sm ">
+                Decrease
+            </button>
+            <button id="plusBtn"
+                class="bg-green-600 py-1 px-2 rounded-2xl text-white font-medium hover:cursor-pointer active:bg-green-500 transition text-sm ">
+                Increase
+            </button>
+        </div>
+
+        <!-- Dynamic Theme Switcher Starts Here! -->
+        <div id="mainContainer"
+            class="flex flex-col items-center justify-center bg-gray-900 min-h-72 p-5 rounded-2xl transition-colors duration-900 ">
+
+            <span id="firstText" class="text-green-500 mb-5 tracking-wider font-extrabold text-xl text-center ">Dynamic
+                Theme Switcher</span>
+
+            <h3 id="headingText" class="text-center text-3xl font-semibold text-white mb-6 "> Current Theme Dark</h3>
+
+            <button id="toggleBtn"
+                class="font-bold bg-blue-600 px-8 py-2 mt-9 rounded-2xl text-white active:bg-blue-500 hover:cursor-pointer animate-pulse ">
+                Toggle Dark Mode
+            </button>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-gray-100 p-6">
+        <!-- Product Card Box -->
+        <div class="bg-white p-6 rounded-2xl shadow-xl w-80 border border-gray-200">
+            <h2 class="text-xl font-bold text-gray-800 mb-2">Wireless Gaming Mouse</h2>
+            <p class="text-gray-500 text-sm mb-4">High performance RGB gaming mouse.</p>
+
+            <!-- Price -->
+            <div class="text-lg font-semibold text-blue-600 mb-4">
+                Price: $<span id="itemPrice">1500</span>
+            </div>
+            <!-- Quantity Controls -->
+            <div class="flex items-center justify-between mb-6 bg-gray-50 p-3 rounded-xl">
+                <span class="text-sm font-medium text-gray-700">Quantity:</span>
+
+                <div class="flex items-center space-x-3">
+
+                    <button id="decreaseQty"
+                        class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-lg font-bold transition hover:cursor-pointer ">-</button>
+                    <span id="qtyDisplay" class="font-bold text-lg">1</span>
+
+                    <button id="increaseQty"
+                        class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-lg font-bold transition hover:cursor-pointer ">+</button>
+                </div>
+            </div>
+            <!-- Total Price Display -->
+            <div class="text-md font-bold text-gray-800 mb-4">
+                Total: $<span id="totalPrice">1500</span>
+            </div>
+            <!-- Add to Cart Button -->
+            <button id="cartBtn"
+                class="w-full bg-blue-600 text-white font-bold py-2.5 rounded-xl transition shadow-md">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <script src="action.js"></script>
+</body>
+</html>
