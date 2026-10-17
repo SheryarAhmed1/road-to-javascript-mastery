@@ -1,91 +1,92 @@
-// // Js Variables let,const and var
+/*
+// Js Variables let,const and var
 
-// //const
-// const storeName = "Dev Store";
-// console.log(storeName);
-// // document.write(storeName);
+//const
+const storeName = "Dev Store";
+console.log(storeName);
+// document.write(storeName);
 
-// // let
-// let price = 500;
-// //update value
-// price = 450;
+// let
+let price = 500;
+//update value
+price = 450;
 
-// console.log(price);
-// // document.write(price);
+console.log(price);
+// document.write(price);
 
-// //Data Types
+//Data Types
 
-// //Boolean
-// //  let isDiscountAvailable = true;
-// let age = 18;
-// let isperson = age > 18;
-// console.log(isperson)
+//Boolean
+//  let isDiscountAvailable = true;
+let age = 18;
+let isperson = age > 18;
+console.log(isperson)
 
-// //Array
-// const techGagates = ["Mouse", "keyboard", "Laptop Stand"];
+//Array
+const techGagates = ["Mouse", "keyboard", "Laptop Stand"];
 
-// console.log(techGagates);
+console.log(techGagates);
 
-// //Object
-// const productDetails = {
-//     name: 'Laptop Stand',
-//     price:" 1200",
-//     inStock : true,
+//Object
+const productDetails = {
+    name: 'Laptop Stand',
+    price:" 1200",
+    inStock : true,
     
-// }
+}
 
-// console.log(productDetails);
+console.log(productDetails);
 
-// //if/else
-// let cartTotal = 900;
-//  if(cartTotal >= 1000){
-//     console.log('"Congratulations! You got free shipping');
-//   } else{
-//         console.log('Shipping charges apply: $100');
-//     }
+//if/else
+let cartTotal = 900;
+ if(cartTotal >= 1000){
+    console.log('"Congratulations! You got free shipping');
+  } else{
+        console.log('Shipping charges apply: $100');
+    }
  
-// //if/else if/else
-// let orderAmount = 50;
+//if/else if/else
+let orderAmount = 50;
 
-// if(orderAmount >= 30){
-//     console.log("20% disount");
-// }else if(orderAmount >= 15){
-//     console.log('10% discount');
-// }else{
-//     console.log('You are not eligible for any discount');
-// }
+if(orderAmount >= 30){
+    console.log("20% disount");
+}else if(orderAmount >= 15){
+    console.log('10% discount');
+}else{
+    console.log('You are not eligible for any discount');
+}
 
 
-// //Functions
+//Functions
 
-// function greetUser (UserName){
-//     if(UserName === 'Asim'){
-//         console.log('Welcome to Dev Store', UserName);
-//     }else{
-//         console.log('Entry banned ')
-//     }
-// }
+function greetUser (UserName){
+    if(UserName === 'Asim'){
+        console.log('Welcome to Dev Store', UserName);
+    }else{
+        console.log('Entry banned ')
+    }
+}
 
-// greetUser('Asim');
-// greetUser('zafar');
+greetUser('Asim');
+greetUser('zafar');
 
-// const displayCount = document.getElementById('count');
-// const plusBtn = document.getElementById('plusBtn');
-// const minusBtn = document.getElementById('minusBtn');
+const displayCount = document.getElementById('count');
+const plusBtn = document.getElementById('plusBtn');
+const minusBtn = document.getElementById('minusBtn');
 
-// let currentValue = 0;
+let currentValue = 0;
 
-// plusBtn.addEventListener( 'click', function() { 
-//     currentValue = currentValue + 1;
+plusBtn.addEventListener( 'click', function() { 
+    currentValue = currentValue + 1;
 
-//     displayCount.innerText = currentValue;
-// });
+    displayCount.innerText = currentValue;
+});
 
-// minusBtn.addEventListener('click', function(){
-//     currentValue = currentValue - 1;
+minusBtn.addEventListener('click', function(){
+    currentValue = currentValue - 1;
 
-//     displayCount.innerText = currentValue;
-// } )
+    displayCount.innerText = currentValue;
+} )
 
 const displayCount = document.getElementById ('count');
 const plusBtn = document.getElementById ('plusBtn');
@@ -169,7 +170,17 @@ increaseQty.addEventListener('click', function(){
 decreaseQty.addEventListener('click', function(){
     quantity = quantity - 1;
     qtyDisplay.innerText = quantity;
-    
+
     calculateTotal = quantity * basePrice ;
     totalPrice.innerText = calculateTotal;
 });
+
+const obj = ['A','B','C'];
+
+for( p = 0; p < obj.length; p++){
+    console.log(obj[p]);
+}
+*/
+
+const list = document.getElementById('items');
+

@@ -323,6 +323,9 @@
   .items-center {
     align-items: center;
   }
+  .justify-around {
+    justify-content: space-around;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -614,9 +617,6 @@
   @media (hover: hover) {
     .hover\:cursor-pointer:hover {
       cursor: pointer;
-    }
-    .hover\:bg-blue-700:hover {
-      background-color: var(--color-blue-700);
     }
     .hover\:bg-gray-300:hover {
       background-color: var(--color-gray-300);
