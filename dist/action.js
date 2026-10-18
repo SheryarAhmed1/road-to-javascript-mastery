@@ -180,7 +180,30 @@ const obj = ['A','B','C'];
 for( p = 0; p < obj.length; p++){
     console.log(obj[p]);
 }
-*/
 
 const list = document.getElementById('items');
+*/
 
+//while loop
+ let code = 3 ;
+
+ while(code <= 5 ){
+    console.log('the number is:' + code);
+    code++;
+ }
+
+//do-while loop
+let s = 1;
+do{
+    console.log('must run one time even condition is false :' + s);
+    s++;
+}while(s <= 0);
+
+//Cart Total Calculator
+
+const prices = [100, 400, 2500, 200, 1000 ];
+let totalSum = 0;
+ 
+for ( i = 0; i < prices.length; i++ ){
+    console.log(totalSum = totalSum + prices[i]);
+}
