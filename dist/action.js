@@ -1,4 +1,4 @@
-/*
+
 // Js Variables let,const and var
 
 //const
@@ -59,34 +59,16 @@ if(orderAmount >= 30){
 
 //Functions
 
-function greetUser (UserName){
-    if(UserName === 'Asim'){
-        console.log('Welcome to Dev Store', UserName);
-    }else{
-        console.log('Entry banned ')
-    }
-}
+// function greetUser (UserName){
+//     if(UserName === 'Asim'){
+//         console.log('Welcome to Dev Store', UserName);
+//     }else{
+//         console.log('Entry banned ')
+//     }
+// }
 
-greetUser('Asim');
-greetUser('zafar');
-
-const displayCount = document.getElementById('count');
-const plusBtn = document.getElementById('plusBtn');
-const minusBtn = document.getElementById('minusBtn');
-
-let currentValue = 0;
-
-plusBtn.addEventListener( 'click', function() { 
-    currentValue = currentValue + 1;
-
-    displayCount.innerText = currentValue;
-});
-
-minusBtn.addEventListener('click', function(){
-    currentValue = currentValue - 1;
-
-    displayCount.innerText = currentValue;
-} )
+// greetUser('Asim');
+// greetUser('zafar');
 
 const displayCount = document.getElementById ('count');
 const plusBtn = document.getElementById ('plusBtn');
@@ -206,7 +188,6 @@ let totalSum = 0;
 for ( i = 0; i < prices.length; i++ ){
     console.log(totalSum = totalSum + prices[i]);
 }
-*/
 
 // Javascript functions
 function calculateDiscount(price, discountPercentage){
