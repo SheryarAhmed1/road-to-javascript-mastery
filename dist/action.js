@@ -182,7 +182,6 @@ for( p = 0; p < obj.length; p++){
 }
 
 const list = document.getElementById('items');
-*/
 
 //while loop
  let code = 3 ;
@@ -207,3 +206,14 @@ let totalSum = 0;
 for ( i = 0; i < prices.length; i++ ){
     console.log(totalSum = totalSum + prices[i]);
 }
+*/
+
+// Javascript functions
+function calculateDiscount(price, discountPercentage){
+    let discountAmount = (price * discountPercentage) / 100; //price is 900 after discount
+    let finalPrice = price - discountAmount;
+    
+    console.log('Original Price: ' + price + ', Final Price after Discount: ' + finalPrice );
+}
+calculateDiscount( 1200 , 10 );
+calculateDiscount( 2500 , 20 );
