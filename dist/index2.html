@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center bg-gray-500 p-10 text-white ">
+    <h1 id="mainHeading" class="tracking-wider font-bold ">DOM Manipulation</h1>
+    <button id="btn" class="bg-blue-500 px-4 py-1 rounded-xl text-white font-bold mt-2 ">Click</button>
+        
+    <div class="flex flex-col border-2 rounded-lg p-4 mt-4">
+        <h2 class="text-white font-semibold text-center pb-3">Mini todo app</h2>
+        <input id="taskInput" type="text" placeholder="Enter new Task" class="bg-white text-gray-800 rounded-xl px-1">
+        <button id="addBtn" class="bg-blue-500 text-white font-medium rounded-xl m-2">Add Task</button>
+        <ul id="taskList">
+
+        </ul>
+        
+    </div>
+
+</div> 
+    <script src="dom.js"></script>
+</body>
+</html>
