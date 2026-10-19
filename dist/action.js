@@ -210,10 +210,42 @@ for ( i = 0; i < prices.length; i++ ){
 
 // Javascript functions
 function calculateDiscount(price, discountPercentage){
-    let discountAmount = (price * discountPercentage) / 100; //price is 900 after discount
+    let discountAmount = (price * discountPercentage) / 100;
     let finalPrice = price - discountAmount;
     
     console.log('Original Price: ' + price + ', Final Price after Discount: ' + finalPrice );
 }
 calculateDiscount( 1200 , 10 );
 calculateDiscount( 2500 , 20 );
+
+//Practice Task
+function checkEvenOrOdd (num){
+    if(num % 2 === 0){
+        console.log('Number is Even');
+    }else{
+        console.log('Number is odd');
+    }
+}
+checkEvenOrOdd(2);
+checkEvenOrOdd(3);
+checkEvenOrOdd(6);
+
+//old way
+function subtractNumber (num1 , num2){
+    let sub = num1 - num2;
+    return sub;
+}
+let finalOutput = subtractNumber (50,5);
+console.log('your answer is: ' + finalOutput );
+
+//Modern and ES6 standard
+
+const squareNumber = (num) =>{
+    return num * num;
+}
+let result = squareNumber (5);
+console.log('Squareroot is: ', + result );
+
+//if your function returns single line output so use this short method
+let divide=(a,b)=> a/b;
+console.log(divide(140,7))
