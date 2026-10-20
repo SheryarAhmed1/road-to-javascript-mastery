@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
 </head>
 <body>
-    
+    <input id="input" class="border" type="text" placeholder="enter number">
+    <button id="btn" class="bg-blue-400 rounded-lg px-2 ">check number</button>
+    <div id="showResult"></div>
+
+    <script>
+        const inputField= document.getElementById('input');
+        const btn = document.getElementById('btn');
+        const showResult = document.getElementById('showResult');
+        const p = document.createElement('p');
+        showResult.appendChild(p);
+        p.innerText = '';
+
+        btn.addEventListener('click', () =>{
+            const value = inputField.value;
+            if(inputField.value === '' ){
+                p.innerText ='please enter a valid number';
+                p.className = 'text-orange-500';
+
+            }else if ( Number(value) > 0 ) {
+                p.className ='text-green-500';
+                p.innerText= 'Positive Number';  
+
+            }else{
+                p.className ='text-red-500';
+                p.innerText ='Negative Zero';
+            }
+        } );
+
+    </script>
 </body>
 </html>
