@@ -139,25 +139,12 @@ switch (grade) {
         break;
 }
 
-
-
-
 //ternary operator
 // condition ? expression1 : expression2
 
 let marks = 70;
 let result = (marks >= 50) ? 'Pass' : 'Fail';
 console.log(result)
-
-function rps(user, computer) {
-if (user === computer) return "draw";
-
-if (user === "rock" && computer === "scissor") return "user";
-if (user === "scissor" && computer == "paper") return "user";
-if (user === "paper" && computer === "rock") return "user";
-
-return "computer";
-}
 console. log(rps("paper", "paper"));
 */
 
