@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="../src/output.css">
 </head>
 <body>
-    <!-- <header>
-      <img src="./assets/burger-menu-svgrepo-com.svg" alt="hamburder menu" class="h-12 w-12" >  
-    </header> -->
-   
-    <!-- <p id="demo"></p>
-    <button type="button" class="bg-blue-300 px-2 rounded-2xl m-2"  onclick="document.getElementById('demo').innerText =' Your Logic is working '">Click</button> -->
+    <header class="flex justify-center" >
+        <div class="relative">
+            <img src="./assets/NYC subway 🚇.png" alt="hamburder menu" class="h-98 opacity-75 rounded-md" >
 
+            <div class="absolute top-0 h-98 w-full flex flex-col justify-center items-center">
+
+                <h1 class="text-center font-bold text-3xl mb-8">People Entered in Subway:</h1>
+
+                <h2 id="count-e" class="text-center font-bold text-3xl mb-8">0</h2>
+
+                <button id="increment-btn" onclick="increment()" class=" bg-red-800 font-bold px-2 py-1 mb-2 text-white rounded-lg active:scale-95 cursor-pointer ">INCREMENT</button>
+
+                <button id="decrement-btn" onclick="decrement()" class=" bg-red-800 font-bold px-2 py-1 mb-2 text-white rounded-lg active:scale-95 cursor-pointer ">DECREMENT</button>
+
+                <button id="reset-btn" onclick="reset()" class=" bg-green-800 font-bold px-2 py-1 text-white rounded-lg active:scale-95 cursor-pointer ">RESET</button>
+
+            </div>
+        </div>
+    </header>
 
     <script src="todo.js"></script>
 </body>

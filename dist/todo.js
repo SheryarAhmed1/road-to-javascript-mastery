@@ -159,7 +159,6 @@ function rps(user,computer){
     return 'computer win';
 };
 console.log(rps('rock', 'scissor'));
-*/
 
 //Coin Toss (Spinn/Toss) Game
 function coinToss(userChoice){
@@ -181,3 +180,22 @@ function coinToss(userChoice){
 
 };
 console.log(coinToss('heads'));
+
+*/
+
+let enteredTotal = document.getElementById('count-e')
+
+let count = 0;
+function increment (){
+    count = count + 1;
+    enteredTotal.innerText= count;
+}
+function decrement(){
+    count = count - 1;
+    enteredTotal.innerText= count;
+
+}
+function reset(){
+    count = 0;
+    enteredTotal.innerText = count
+}
