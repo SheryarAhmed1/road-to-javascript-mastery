@@ -146,7 +146,6 @@ let marks = 70;
 let result = (marks >= 50) ? 'Pass' : 'Fail';
 console.log(result)
 console. log(rps("paper", "paper"));
-*/
 
 // Rock-paper-scissors logic
 
@@ -156,7 +155,29 @@ function rps(user,computer){
     if (user === 'rock' && computer === 'scissor' ) return 'user win';
     if (user === 'scissor' && computer === 'paper') return 'user win';
     if (user === 'paper' && computer === 'rock') return 'user win';
-
-return 'computer win';
+    
+    return 'computer win';
 };
 console.log(rps('rock', 'scissor'));
+*/
+
+//Coin Toss (Spinn/Toss) Game
+function coinToss(userChoice){
+    let user = userChoice.toLowerCase();
+    let computer = '';
+    let randomNumber = Math.random();
+
+    if (randomNumber <0.5) {
+        computer = 'heads';        
+    }else{
+        computer = 'tails';
+    }
+
+    if(user === computer){
+        return `Computer Chose : ${computer}. You Won ` 
+    }else{
+        return `Computer Chose : ${computer}. You Lost! ` 
+    }
+
+};
+console.log(coinToss('heads'));
