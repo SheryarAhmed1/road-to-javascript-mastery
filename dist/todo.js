@@ -177,13 +177,13 @@ function coinToss(userChoice){
     }else{
         return `Computer Chose : ${computer}. You Lost! ` 
     }
-
+    
 };
 console.log(coinToss('heads'));
-
 */
 
-let enteredTotal = document.getElementById('count-e')
+// let enteredTotal = document.getElementById('count-e');
+let enteredTotal = document.getElementById('count-e');
 
 let count = 0;
 function increment (){
