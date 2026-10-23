@@ -1,7 +1,9 @@
-// 7. Use continue to skip a specific number
-for ( i = 1 ; i <= 10 ; i++){
-    if( i === 5){
-        continue;
-    }
-    console.log(i);
+// 8. Guess number game – use while to ask until correct
+let secretNum = 8;
+
+let userInput = Number(prompt('Guess Number'));
+
+while (userInput !==secretNum) {
+    userInput = Number(prompt('Guess Number'));
+    alert('Congratulation You Guess correct Number');
 }
