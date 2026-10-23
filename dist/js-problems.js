@@ -1,8 +1,7 @@
-// 4. Sum of all numbers in an array
-let number = [ 2,3,4,6,8,7];
-let sum = 0;
-for(i = 0;  i < number.length; i++){
-    console.log(`${sum} + ${number[i]} = ${sum + number[i]} ` )   
-    sum += number [i];
+// 5. Print all characters of a name using for-of
+// let id =prompt('enter string');
+let id = 'javascript';
+for (const character of id) {
+    console.log(character);
 }
-console.log(`Sum of all Numbers: ${sum} ` )
+console.log(`${id} has ${id.length} Characters `)
