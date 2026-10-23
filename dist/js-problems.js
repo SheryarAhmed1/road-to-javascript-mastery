@@ -1,7 +1,10 @@
-// 5. Print all characters of a name using for-of
-// let id =prompt('enter string');
-let id = 'javascript';
-for (const character of id) {
-    console.log(character);
+// 6. Print all object keys and values using for-in
+let obj = {
+    name: 'sheryar',
+    age : 18,
+    edu : 'DAE'
 }
-console.log(`${id} has ${id.length} Characters `)
+for (let key in obj){
+    let output = obj[key];
+    console.log(`${key}: ${output} `);
+}
