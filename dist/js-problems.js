@@ -1,9 +1,10 @@
-// 8. Guess number game – use while to ask until correct
-let secretNum = 8;
+// 9. Pattern: Print triangle using *
 
-let userInput = Number(prompt('Guess Number'));
-
-while (userInput !==secretNum) {
-    userInput = Number(prompt('Guess Number'));
-    alert('Congratulation You Guess correct Number');
+// let h = prompt('enter number that you want to print in the form of star');
+for ( a = 1; a <= 10; a++){
+    let storeRow = '';
+        for(b = 1 ; b <= a; b++){
+            storeRow += "*";
+        }
+        console.log(storeRow);
 }
