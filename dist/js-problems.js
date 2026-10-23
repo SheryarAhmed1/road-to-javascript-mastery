@@ -1,6 +1,7 @@
-//2. Print even numbers between 1 to 20
-for(i= 1 ; i <= 20; i++){
-    if( i % 2 === 0){
-        console.log(`${i} is even number `);
-    }
+// 3. Reverse a string using loop
+let val = prompt('enter any string');
+let storeVal = '';
+for(let i = val.length -1; i >= 0; i--){
+    storeVal += val[i];
 }
+console.log(storeVal);
