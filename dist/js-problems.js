@@ -1,3 +1,4 @@
+/*
 //1. Print 1 to 10 using for
 for(i = 1;i <= 10; i++){
     console.log(i);
@@ -72,3 +73,13 @@ for (let i = 1; i <= 5; i++) {
     
     console.log(rowContent);
 }
+*/
+// 10. Sum of even numbers in an array using forEach
+let numbers = [1,2,3,4,5,6,7,8,9,10];
+ let evenSum = 0;
+ numbers.forEach(num => {
+    if(num %2 === 0){
+        evenSum += num;
+    }
+});
+console.log(`the sum of all even numbers is: ${evenSum}`);
