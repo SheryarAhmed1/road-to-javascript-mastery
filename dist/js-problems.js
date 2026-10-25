@@ -73,7 +73,6 @@ for (let i = 1; i <= 5; i++) {
     
     console.log(rowContent);
 }
-*/
 // 10. Sum of even numbers in an array using forEach
 let numbers = [1,2,3,4,5,6,7,8,9,10];
  let evenSum = 0;
@@ -83,3 +82,27 @@ let numbers = [1,2,3,4,5,6,7,8,9,10];
     }
 });
 console.log(`the sum of all even numbers is: ${evenSum}`);
+
+let view = 0;
+
+for(i = 1; i<=100; i++){
+    if( i % 2 === 0){
+        view ++;
+        console.log(i);
+    }
+    if(view === 5) break;
+}
+*/
+
+// 11: Find the Largest Number in an Array 
+
+let numbers =[12, 45, 7, 89, 23, 56];
+let largest = numbers[0]; 
+
+for (let i = 1; i < numbers.length; i++) {
+    
+    if (numbers[i] > largest) {
+        largest = numbers[i];
+    }
+}
+console.log(`The largest number is: ${largest}`); 
