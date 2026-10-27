@@ -92,7 +92,6 @@ for(i = 1; i<=100; i++){
     }
     if(view === 5) break;
 }
-*/
 
 // 11: Find the Largest Number in an Array 
 
@@ -106,3 +105,4 @@ for (let i = 1; i < numbers.length; i++) {
     }
 }
 console.log(`The largest number is: ${largest}`); 
+*/ 

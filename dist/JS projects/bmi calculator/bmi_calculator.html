@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+<body class="bg-amber-500">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="flex flex-col items-center bg-white p-5 rounded-2xl px-5">
+            <h1 class="font-bold text-center text-3xl">BMI Calculator</h1>
+            
+            <form id="bmiForm" class="flex flex-col bg-white p-5 rounded-2xl max-w-72 w-full">
+                <label for="height" class="font-thin text-sm mb-1 mt-4">Height in CM:</label>
+                <!-- id="height" aur required lagaya hai -->
+                <input type="number" id="height" class="border border-black rounded-lg py-1 px-2" required>
+                
+                <label for="weight" class="font-thin text-sm mb-1 mt-4">Weight in KG:</label>
+                <!-- id="weight" aur required lagaya hai -->
+                <input type="number" id="weight" class="border border-black rounded-lg py-1 px-2" required>
+                
+                <button type="submit" class="bg-amber-500 mt-8 rounded-lg text-white font-bold py-2 tracking-wider hover:bg-amber-600 hover:cursor-pointer">
+                    Calculate
+                </button>
+
+                <!-- Aapka Output Result Yahan Show Hoga (Layout kharab nahi karega) -->
+                <div id="result" class="text-center font-bold mt-4 text-amber-600 hidden"></div>
+
+                <h2 class="text-center font-bold mt-5">BMI Weight Guide</h2>
+                <div class="flex flex-col justify-center">
+                    <span class="text-sm font-light">Under Weight = Less than 18.6</span>
+                    <span class="text-sm font-light">Normal Range = 18.6 and 24.9</span>
+                    <span class="text-sm font-light">Overweight = Greater than 24.9</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="bmi_calculator.js"></script>
+</body>
+</html>
