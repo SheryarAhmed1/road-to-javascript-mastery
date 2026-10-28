@@ -3,29 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>Practice</title>
     <link rel="stylesheet" href="../../output.css">
 </head>
 <body>
-    <header class="flex justify-center" >
-        <div class="relative">
-            <img src="../../assets/NYC subway 🚇.png" alt="hamburder menu" class="h-98 opacity-75 rounded-md" >
+    <!-- <h1 id="mainHeading" class="font-bold tracking-wider " >Sheryar</h1>
+    <button id="btn" class="bg-amber-400 px-3 rounded-lg hover:cursor-pointer hover:bg-amber-500 text-sm font-medium " >Click</button> -->
+    <input type="text" id="inputField" placeholder="enter something" class="px-1 rounded-lg bg-amber-200">
+    <button id="addItem" class="bg-blue-300 rounded-lg p-2 hover::bg-blue-400 m-5 ">Add Item</button>
+    <ul id="itemsList">
 
-            <div class="absolute top-0 h-98 w-full flex flex-col justify-center items-center">
-
-                <h1 class="text-center font-bold text-3xl mb-8">People Entered in Subway:</h1>
-
-                <h2 id="count-e" class="text-center font-bold text-3xl mb-8">0</h2>
-
-                <button id="increment-btn" onclick="increment()" class=" bg-red-800 font-bold px-2 py-1 mb-2 text-white rounded-lg active:scale-95 cursor-pointer ">INCREMENT</button>
-
-                <button id="decrement-btn" onclick="decrement()" class=" bg-red-800 font-bold px-2 py-1 mb-2 text-white rounded-lg active:scale-95 cursor-pointer ">DECREMENT</button>
-
-                <button id="reset-btn" onclick="reset()" class=" bg-green-800 font-bold px-2 py-1 text-white rounded-lg active:scale-95 cursor-pointer ">RESET</button>
-
-            </div>
-        </div>
-    </header>
+    </ul>
 
     <script src="todo.js"></script>
 </body>

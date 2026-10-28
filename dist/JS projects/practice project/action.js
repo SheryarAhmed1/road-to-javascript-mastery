@@ -30,29 +30,29 @@ console.log(techGagates);
 //Object
 const productDetails = {
     name: 'Laptop Stand',
-    price:" 1200",
-    inStock : true,
-    
+    price: " 1200",
+    inStock: true,
+
 }
 
 console.log(productDetails);
 
 //if/else
 let cartTotal = 900;
- if(cartTotal >= 1000){
+if (cartTotal >= 1000) {
     console.log('"Congratulations! You got free shipping');
-  } else{
-        console.log('Shipping charges apply: $100');
-    }
- 
+} else {
+    console.log('Shipping charges apply: $100');
+}
+
 //if/else if/else
 let orderAmount = 50;
 
-if(orderAmount >= 30){
+if (orderAmount >= 30) {
     console.log("20% disount");
-}else if(orderAmount >= 15){
+} else if (orderAmount >= 15) {
     console.log('10% discount');
-}else{
+} else {
     console.log('You are not eligible for any discount');
 }
 
@@ -70,33 +70,33 @@ if(orderAmount >= 30){
 // greetUser('Asim');
 // greetUser('zafar');
 
-const displayCount = document.getElementById ('count');
-const plusBtn = document.getElementById ('plusBtn');
-const minusBtn = document.getElementById ('minusBtn');
+const displayCount = document.getElementById('count');
+const plusBtn = document.getElementById('plusBtn');
+const minusBtn = document.getElementById('minusBtn');
 let currentValue = 0;
 
-plusBtn.addEventListener('click', function(){
+plusBtn.addEventListener('click', function () {
     count.classList.add('bg-green-500', 'text-white');
 
     currentValue = currentValue + 1;
     displayCount.innerText = currentValue;
-} );
-minusBtn.addEventListener('click', function(){
+});
+minusBtn.addEventListener('click', function () {
     count.classList.add('bg-red-500', 'text-white');
 
-    currentValue = currentValue -1;
-    
+    currentValue = currentValue - 1;
+
     displayCount.innerText = currentValue;
-} );
+});
 
 //Theme Toggler
-const mainContainer = document.getElementById('mainContainer'); 
+const mainContainer = document.getElementById('mainContainer');
 const firstText = document.getElementById('firstText');
-const headingText = document.getElementById('headingText'); 
-const toggleBtn = document.getElementById('toggleBtn'); 
+const headingText = document.getElementById('headingText');
+const toggleBtn = document.getElementById('toggleBtn');
 
-toggleBtn.addEventListener('click', function(){
-    if(mainContainer.classList.contains('bg-gray-900')){
+toggleBtn.addEventListener('click', function () {
+    if (mainContainer.classList.contains('bg-gray-900')) {
 
         mainContainer.classList.remove('bg-gray-900');
         mainContainer.classList.add('bg-white', 'border-5', 'border-amber-500');
@@ -106,9 +106,9 @@ toggleBtn.addEventListener('click', function(){
 
         headingText.innerText = 'Current Theme Light';
 
-        headingText.classList.add ('text-gray-900');
+        headingText.classList.add('text-gray-900');
         headingText.classList.remove('text-white')
-    }else{
+    } else {
         mainContainer.classList.remove('bg-white', 'border-5', 'border-amber-500');
         mainContainer.classList.add('bg-gray-900');
 
@@ -129,81 +129,80 @@ const increaseQty = document.getElementById('increaseQty');
 const cartBtn = document.getElementById('cartBtn');
 const itemPrice = document.getElementById('itemPrice');
 const totalPrice = document.getElementById('totalPrice');
-const basePrice = 1500 ;
+const basePrice = 1500;
 
 
 let quantity = 1;
-let calculateTotal = basePrice; 
+let calculateTotal = basePrice;
 
-cartBtn.addEventListener('click', function(){
-    cartBtn.classList.add('text-green-500', 'bg-green-500' );
-    cartBtn.innerText ='Successfully Added to Cart';
+cartBtn.addEventListener('click', function () {
+    cartBtn.classList.add('text-green-500', 'bg-green-500');
+    cartBtn.innerText = 'Successfully Added to Cart';
 
-} );
+});
 
-increaseQty.addEventListener('click', function(){
+increaseQty.addEventListener('click', function () {
     quantity = quantity + 1;
     qtyDisplay.innerText = quantity;
 
-    calculateTotal = quantity * basePrice ;
+    calculateTotal = quantity * basePrice;
     totalPrice.innerText = calculateTotal;
 });
 
-decreaseQty.addEventListener('click', function(){
+decreaseQty.addEventListener('click', function () {
     quantity = quantity - 1;
     qtyDisplay.innerText = quantity;
 
-    calculateTotal = quantity * basePrice ;
+    calculateTotal = quantity * basePrice;
     totalPrice.innerText = calculateTotal;
 });
 
-const obj = ['A','B','C'];
+const obj = ['A', 'B', 'C'];
 
-for( p = 0; p < obj.length; p++){
+for (p = 0; p < obj.length; p++) {
     console.log(obj[p]);
 }
 
 const list = document.getElementById('items');
 
 //while loop
- let code = 3 ;
+let code = 3;
 
- while(code <= 5 ){
+while (code <= 5) {
     console.log('the number is:' + code);
     code++;
- }
+}
 
 //do-while loop
 let s = 1;
-do{
+do {
     console.log('must run one time even condition is false :' + s);
     s++;
-}while(s <= 0);
+} while (s <= 0);
 
 //Cart Total Calculator
-
-const prices = [100, 400, 2500, 200, 1000 ];
+const prices = [100, 400, 2500, 200, 1000];
 let totalSum = 0;
- 
-for ( i = 0; i < prices.length; i++ ){
+
+for (i = 0; i < prices.length; i++) {
     console.log(totalSum = totalSum + prices[i]);
 }
 
 // Javascript functions
-function calculateDiscount(price, discountPercentage){
+function calculateDiscount(price, discountPercentage) {
     let discountAmount = (price * discountPercentage) / 100;
     let finalPrice = price - discountAmount;
-    
-    console.log('Original Price: ' + price + ', Final Price after Discount: ' + finalPrice );
+
+    console.log('Original Price: ' + price + ', Final Price after Discount: ' + finalPrice);
 }
-calculateDiscount( 1200 , 10 );
-calculateDiscount( 2500 , 20 );
+calculateDiscount(1200, 10);
+calculateDiscount(2500, 20);
 
 //Practice Task
-function checkEvenOrOdd (num){
-    if(num % 2 === 0){
+function checkEvenOrOdd(num) {
+    if (num % 2 === 0) {
         console.log('Number is Even');
-    }else{
+    } else {
         console.log('Number is odd');
     }
 }
@@ -212,21 +211,21 @@ checkEvenOrOdd(3);
 checkEvenOrOdd(6);
 
 //old way
-function subtractNumber (num1 , num2){
+function subtractNumber(num1, num2) {
     let sub = num1 - num2;
     return sub;
 }
-let finalOutput = subtractNumber (50,5);
-console.log('your answer is: ' + finalOutput );
+let finalOutput = subtractNumber(50, 5);
+console.log('your answer is: ' + finalOutput);
 
 //Modern and ES6 standard
 
-const squareNumber = (num) =>{
+const squareNumber = (num) => {
     return num * num;
 }
-let result = squareNumber (5);
-console.log('Squareroot is: ', + result );
+let result = squareNumber(5);
+console.log('Squareroot is: ', + result);
 
 //if your function returns single line output so use this short method
-let divide=(a,b)=> a/b;
-console.log(divide(140,7))
+let divide = (a, b) => a / b;
+console.log(divide(140, 7))

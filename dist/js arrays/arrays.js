@@ -108,3 +108,26 @@ let u = [1, 2, 3, 4, 5];
 let r = [...u];
 //output of r is : [1,2,3,4,5]
 console.log(r);
+
+// � Practice Zone
+// 1. Create an array of student names and print each
+let student = ['ali', 'osman', 'zeshan'];
+student.forEach(function (name) {
+    console.log(name);
+})
+
+// 2. Filter even numbers from an array
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let evenNumber = number.filter(function (even) {
+    return even % 2 === 0;
+});
+console.log(evenNumber);
+
+// 3. Map prices to include GST (18%)
+let price = [100, 200, 250, 300];
+
+let includeGst = price.map(function (gst) {
+    return gst * 1.18;
+});
+
+console.log(includeGst);
