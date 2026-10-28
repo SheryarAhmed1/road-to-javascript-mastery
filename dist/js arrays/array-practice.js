@@ -88,6 +88,48 @@ let flatArray = nestedArray.flat();
 console.log(flatArray);
 
 //5: Merge and Sort Arrays:
-let array = [1,3];
-let array2 = [2,4];
+let array1 = [1, 3];
+let array2 = [2, 4];
 
+let mergeAndSort = [...array1, ...array2].sort((x, y) => x - y);
+console.log(mergeAndSort);
+
+//6: Find a Specific Object:
+let students = [
+    { id: 1, name: 'ali' },
+    { id: 2, name: 'asim' },
+    { id: 3, name: 'zafran' }
+]
+let school = students.find(function (student) {
+    return student.id === 2;
+});
+console.log(school);
+
+
+//7: Check All Elements Condition: 
+let value = [1, 4, 8, 9, 12, , 13, 5];
+
+let check = value.every(condition => condition > 10);
+console.log(check);
+
+//8: Chaining Map and Filter:
+let digits = [1, 2, 3, 4, 5, 6, 7];
+
+let filter = digits
+    .filter(odd => odd % 2 === 1)
+    .map(double => double * 2);
+console.log(filter);
+
+//9:Count Occurrences: 
+let fruits = ['apple', 'banana', 'apple', 'orange', 'banana'];
+let totalApples = fruits.filter(fruit => fruit === 'apple').length;
+console.log(totalApples);
+
+//10: Extract Property Values:
+let amount = [
+    { name: 'Laptop', price: 1000 },
+    { name: 'Phone', price: 500 }
+];
+
+let finalOutput = amount.map(print => print.price);
+console.log(finalOutput)
