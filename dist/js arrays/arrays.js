@@ -109,6 +109,7 @@ let r = [...u];
 //output of r is : [1,2,3,4,5]
 console.log(r);
 
+
 // � Practice Zone
 // 1. Create an array of student names and print each
 let student = ['ali', 'osman', 'zeshan'];
@@ -125,9 +126,43 @@ console.log(evenNumber);
 
 // 3. Map prices to include GST (18%)
 let price = [100, 200, 250, 300];
-
 let includeGst = price.map(function (gst) {
     return gst * 1.18;
 });
-
 console.log(includeGst);
+
+// 4. Reduce salaries to calculate total payroll
+
+// 5. Find the first student with grade A
+const students = [
+    { name: "John", grade: "B" },
+    { name: "Mary", grade: "A" },
+    { name: "Sam", grade: "A" }
+];
+let score = students.find(student => student.grade === 'A')
+console.log(score);
+
+// 6. Write a function to reverse an array
+let shoeSizes = [4, 6, 7, 5, 9, 8, 11, 10];
+let reverse = shoeSizes.reverse();
+console.log(reverse);
+
+// 7. Sort array of ages in ascending order
+const abc = ["e", "d", "c", "b", "a"];
+abc.sort()
+console.log(abc);
+// 8. Destructure first two elements of an array
+let arr = ['apple', 'orange', 'mango'];
+let [first, second] = arr;
+console.log(first);
+console.log(second);
+
+// 9. Use some() to check if any student failed
+let studentScore = [29, 33, 40, 45, 50];
+let checkScore = studentScore.some(condition => condition < 33);
+console.log(checkScore)
+
+// 10. Use spread to copy and add new item
+let values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let newValues = [...values, 10, 11];
+console.log(newValues);

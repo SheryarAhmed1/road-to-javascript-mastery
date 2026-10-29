@@ -1,4 +1,4 @@
-/*
+
 //Arrays problems level one (easy)
 //1: Find Array Length:
 let a = [1, 2, 3, 4, 5, 6];
@@ -15,8 +15,8 @@ c.shift();
 console.log(c);
 
 //4: Find Index: 
-let fruits = ['apple', 'banana', 'orange'];
-console.log(fruits.indexOf('orange'));
+let frt = ['apple', 'banana', 'orange'];
+console.log(frt.indexOf('orange'));
 
 //5: Check Item Presence:
 let array = [1, 2, 3, 4, 5, 6, 7, 5];
@@ -52,7 +52,7 @@ let show = x.map(function (square) {
     return square * square;
 });
 console.log(show);
-*/
+
 
 //Arrays problems level two (intermediate)
 //1: Filter Even Numbers: 
@@ -64,8 +64,8 @@ console.log(newNum);
 
 //2: Find Maximum Number:
 let findMax = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let find = findMax.reduce(function (min, max) {
-    return min = max;
+let find = findMax.reduce(function (max, current) {
+    return current > max ? current: max;
 });
 console.log(find);
 
@@ -96,7 +96,7 @@ console.log(mergeAndSort);
 
 //6: Find a Specific Object:
 let students = [
-    { id: 1, name: 'ali' },
+    { id: 1, name: 'ali' }, 
     { id: 2, name: 'asim' },
     { id: 3, name: 'zafran' }
 ]
