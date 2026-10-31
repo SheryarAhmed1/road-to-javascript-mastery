@@ -308,6 +308,12 @@
   .table {
     display: table;
   }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-98 {
     height: calc(var(--spacing) * 98);
   }
@@ -371,6 +377,9 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -458,6 +467,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-zinc-800 {
+    background-color: var(--color-zinc-800);
   }
   .bg-cover {
     background-size: cover;
