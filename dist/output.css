@@ -44,6 +44,7 @@
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
     --color-zinc-600: oklch(44.2% 0.017 285.786);
+    --color-zinc-700: oklch(37% 0.013 285.805);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-black: #000;
     --color-white: #fff;
@@ -257,6 +258,9 @@
   .m-auto {
     margin: auto;
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -349,6 +353,9 @@
   }
   .resize {
     resize: both;
+  }
+  .list-disc {
+    list-style-type: disc;
   }
   .flex-col {
     flex-direction: column;
@@ -467,6 +474,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-zinc-700 {
+    background-color: var(--color-zinc-700);
   }
   .bg-zinc-800 {
     background-color: var(--color-zinc-800);
