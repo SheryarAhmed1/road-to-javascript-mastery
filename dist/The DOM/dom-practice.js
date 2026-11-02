@@ -3,7 +3,6 @@ let heading = document.querySelector('#heading');
 heading.innerText = 'Welcome to Sheryians!';
 
 //Task2 : Select <li> element and print their text using a loop
-
 let list = document.querySelectorAll('li');
 
 for (i = 0; i < list.length; i++) {

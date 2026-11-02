@@ -20,15 +20,12 @@ section.appendChild(p);
 document.querySelector('#profile-container').append(section);
 
 
-
 const techStack = ["JavaScript", "TypeScript", "React.js", "Tailwind CSS", "Git & GitHub"];
-
 const ulList = document.querySelector('#item-list');
 
 techStack.forEach((item) => {
-    
     const li = document.createElement('li');
-    
+
     li.innerText = item;
     li.classList.add('bg-zinc-700', 'p-2', 'my-2', 'rounded-md', 'text-white', 'list-disc');
     ulList.appendChild(li);
