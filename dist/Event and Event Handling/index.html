@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Handling</title>
+    <link rel="icon" href="../assets/js.png">
     <link rel="stylesheet" href="../output.css">
 </head>
 
@@ -13,21 +14,32 @@
     <div id="getData">
         <input type="text" name="" id="" placeholder="type...">
     </div>
-    
+
 
     <div class="p-3">
-    <h2 class="font-bold mb-2">Select Laptop</h2>
-    <select>
-        <option selected disabled>Choose Laptop</option>
-        <option value="lenovo">lenovo ThinkPad</option>
-        <option value="dell">Dell XPS</option>
-        <option value="macbook">Macbook Air</option>
-    </select>
+        <h2 class="font-bold mb-2">Select Laptop</h2>
+        <select>
+            <option selected disabled>Choose Laptop</option>
+            <option value="lenovo">lenovo ThinkPad</option>
+            <option value="dell">Dell XPS</option>
+            <option value="macbook">Macbook Air</option>
+        </select>
     </div>
 
     <div id="scrn" class="select-none flex flex-col justify-center items-center">
         <h3 class="font-sans text-7xl">hey!</h3>
     </div>
+
+    <div class="text-center">
+
+        <input type="file" id="getinp" class="hidden">
+        <div id="btn" class="py-4 px-6 bg-green-400 w-36 rounded-lg m-auto mt-10 text-center font-semibold cursor-pointer hover:bg-green-500 transition-transform duration-300   hover:scale-105">
+            Choose File
+        </div>
+        <span id="alert" class="p-8 font-semibold text-xl"></span>
+
+    </div>
+
     <script src="script.js"></script>
 </body>
 

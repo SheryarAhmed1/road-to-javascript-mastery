@@ -32,11 +32,6 @@ function run(show) {
         input.classList.add('bg-amber-200')
         input.classList.remove('bg-red-600')
     }
-    // input.addEventListener('input', function(show){
-    //     if(show.data !== null){
-    //         console.log(show.data)
-    //     }
-    // } );
 }
 input.addEventListener('input', run);
 
@@ -52,16 +47,42 @@ function show(device) {
 }
 select.addEventListener('change', show);
 
-
+//keyup event //
 const scrn = document.querySelector('#scrn');
 const h3 = document.querySelector('h3');
 
-window.addEventListener('keyup', function(display){
+window.addEventListener('keyup', function (display) {
     // console.log(display.key)
-    if(display.key === ' '){
+    if (display.key === ' ') {
         h3.innerText = 'spc'
     }
-    else{
+    else {
         h3.innerText = display.key;
+    }
+});
+
+//getting input file from user using js//
+const getinp = document.querySelector('#getinp');
+const btn = document.querySelector('#btn');
+const alert = document.querySelector('#alert');
+
+btn.addEventListener('click', function () {
+    getinp.click();
+});
+
+getinp.addEventListener('change', function (detail) {
+    const data = detail.target.files[0];
+    const isImage= data.type.startsWith('image/') && data.size;
+    if(!data) return;
+
+    if(isImage){
+        btn.innerText = data.name;
+        alert.innerText = 'Valid image';
+        alert.classList.add('text-green-500')
+    }else{
+        btn.innerText = 'Choose onother file'
+        alert.innerText = 'Invalid file type';
+        alert.classList.remove('text-green-500')  
+        alert.classList.add('text-red-500')  
     }
 });
