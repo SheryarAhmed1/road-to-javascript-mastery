@@ -60,6 +60,16 @@ window.addEventListener('keyup', function (display) {
         h3.innerText = display.key;
     }
 });
+//keydown event // oppose to keyup 
+// window.addEventListener('keydown', function (display) {
+//     // console.log(display.key)
+//     if (display.key === ' ') {
+//         h3.innerText = 'spc'
+//     }
+//     else {
+//         h3.innerText = display.key;
+//     }
+// });
 
 //getting input file from user using js//
 const getinp = document.querySelector('#getinp');
@@ -72,17 +82,61 @@ btn.addEventListener('click', function () {
 
 getinp.addEventListener('change', function (detail) {
     const data = detail.target.files[0];
-    const isImage= data.type.startsWith('image/') && data.size;
-    if(!data) return;
+    const isImage = data.type.startsWith('image/') && data.size;
+    if (!data) return;
 
-    if(isImage){
+    if (isImage) {
         btn.innerText = data.name;
         alert.innerText = 'Valid image';
         alert.classList.add('text-green-500')
-    }else{
+    } else {
         btn.innerText = 'Choose onother file'
         alert.innerText = 'Invalid file type';
-        alert.classList.remove('text-green-500')  
-        alert.classList.add('text-red-500')  
+        alert.classList.remove('text-green-500')
+        alert.classList.add('text-red-500')
+    }
+});
+
+//mouseover event//
+const div1 = document.querySelector('#div1');
+div1.addEventListener('mouseover', function () {
+    div1.classList.add('bg-green-500');
+    div1.classList.remove('bg-red-600');
+
+});
+
+div1.addEventListener('mouseout', function () {
+    div1.classList.remove('bg-green-500')
+    div1.classList.add('bg-red-600')
+});
+
+// mousemove event//
+window.addEventListener('mousemove', function (data) {
+    // console.log(data.clientX , data.clientY);
+    div1.style.transform = `translate(${data.clientX}px, ${data.clientY}px)`;
+});
+
+//Event Bubbling // 
+let bubble = document.querySelector('#bubble');
+bubble.addEventListener('click', function () {
+    bubble.classList.add('bg-red-400', 'text-white');
+});
+
+document.querySelector('ul').addEventListener('click', function (result) {
+    result.target.classList.toggle('line-through')
+});
+
+let char = document.querySelector('#char');
+let remaining = document.querySelector('#remaining');
+
+
+//Live Character Counter//  
+char.addEventListener('input', function () {
+    let left = 20 - char.value.length;
+    remaining.textContent = left;
+    if (left < 0){
+        remaining.className ='text-red-500';
+    }else{
+        remaining.className ='text-black';
     }
 });
