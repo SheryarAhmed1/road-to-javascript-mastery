@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up / Registration Form</title>
+    <link rel="icon" href="../assets/check.png">
+    <link rel="stylesheet" href="../output.css">
+</head>
+
+<body>
+    <div class="flex flex-col items-center">
+        <h1 class="mb-3 text-shadow-md font-bold m-5">Sign-up / Registration Form</h1> 
+
+        <form autocomplete="off" class="flex flex-col bg-gray-200 p-5 rounded-2xl">
+            <label for="userName">UserName</label>
+            <input id="userName" type="text" placeholder="enter username.." class="border px-2 rounded-md my-2">
+            <span id="error1" class="text-sm text-red-500"></span>
+            
+            <label for="mail">Email</label>
+            <input id="mail" type="email" placeholder="enter email.." class="border px-2 rounded-md my-2">
+            <span id="error2" class="text-sm text-red-500"></span>
+            
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="password" class="border px-2 rounded-md my-2">
+            <span id="passworderror" class="text-sm text-red-500"></span>
+            
+            <label for="confirm">Confirm Password</label>
+            <!-- type="confirm" ki jagah type="password" hona chahiye -->
+            <input id="confirm" type="password" placeholder="confirm password" class="border px-2 rounded-md my-2">
+            <span id="confpassword" class="text-sm text-red-500"></span>
+
+            <span id="correct" class="text-green-700 text-sm font-bold"></span>
+
+            <input type="submit" value="Register" class="bg-blue-500 hover:bg-blue-300 cursor-pointer p-1 my-2 rounded-lg text-white font-bold">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
