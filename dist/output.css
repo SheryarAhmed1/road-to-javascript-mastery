@@ -329,6 +329,9 @@
   .m-6 {
     margin: calc(var(--spacing) * 6);
   }
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
   .m-auto {
     margin: auto;
   }
@@ -569,6 +572,9 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -802,8 +808,17 @@
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .object-contain {
+    object-fit: contain;
+  }
   .object-cover {
     object-fit: cover;
+  }
+  .object-fill {
+    object-fit: fill;
+  }
+  .object-center {
+    object-position: center;
   }
   .p-1 {
     padding: var(--spacing);
@@ -1044,6 +1059,9 @@
   .text-red-500 {
     color: var(--color-red-500);
   }
+  .text-red-800 {
+    color: var(--color-red-800);
+  }
   .text-slate-500 {
     color: var(--color-slate-500);
   }
@@ -1149,6 +1167,10 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .duration-700 {
+    --tw-duration: 700ms;
+    transition-duration: 700ms;
+  }
   .duration-900 {
     --tw-duration: 900ms;
     transition-duration: 900ms;
@@ -1185,6 +1207,9 @@
     }
     .hover\:bg-blue-700:hover {
       background-color: var(--color-blue-700);
+    }
+    .hover\:bg-gray-100:hover {
+      background-color: var(--color-gray-100);
     }
     .hover\:bg-gray-300:hover {
       background-color: var(--color-gray-300);
@@ -1262,6 +1287,9 @@
     }
   }
   @media (width >= 64rem) {
+    .lg\:block {
+      display: block;
+    }
     .lg\:flex {
       display: flex;
     }
