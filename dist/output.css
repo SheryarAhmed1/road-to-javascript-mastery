@@ -399,41 +399,17 @@
   .table {
     display: table;
   }
-  .size-1 {
-    width: var(--spacing);
-    height: var(--spacing);
-  }
-  .size-1\/2 {
-    width: calc(1 / 2 * 100%);
-    height: calc(1 / 2 * 100%);
-  }
   .size-3 {
     width: calc(var(--spacing) * 3);
     height: calc(var(--spacing) * 3);
-  }
-  .size-8 {
-    width: calc(var(--spacing) * 8);
-    height: calc(var(--spacing) * 8);
   }
   .size-72 {
     width: calc(var(--spacing) * 72);
     height: calc(var(--spacing) * 72);
   }
-  .size-96 {
-    width: calc(var(--spacing) * 96);
-    height: calc(var(--spacing) * 96);
-  }
   .size-112 {
     width: calc(var(--spacing) * 112);
     height: calc(var(--spacing) * 112);
-  }
-  .size-auto {
-    width: auto;
-    height: auto;
-  }
-  .size-fit {
-    width: fit-content;
-    height: fit-content;
   }
   .size-full {
     width: 100%;
@@ -457,14 +433,8 @@
   .h-56 {
     height: calc(var(--spacing) * 56);
   }
-  .h-72 {
-    height: calc(var(--spacing) * 72);
-  }
   .h-98 {
     height: calc(var(--spacing) * 98);
-  }
-  .h-\[28rem\] {
-    height: 28rem;
   }
   .h-full {
     height: 100%;
@@ -477,9 +447,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -498,9 +465,6 @@
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
-  }
-  .w-\[28rem\] {
-    width: 28rem;
   }
   .w-full {
     width: 100%;
@@ -716,9 +680,6 @@
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
-  .bg-blue-100 {
-    background-color: var(--color-blue-100);
-  }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
   }
@@ -835,10 +796,6 @@
     @supports (background-image: linear-gradient(in lab, red, red)) {
       --tw-gradient-position: to right in oklab;
     }
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .bg-gradient-to-l {
-    --tw-gradient-position: to left in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-gradient-to-r {
@@ -1131,6 +1088,9 @@
   }
   .text-red-500 {
     color: var(--color-red-500);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
   }
   .text-slate-100 {
     color: var(--color-slate-100);

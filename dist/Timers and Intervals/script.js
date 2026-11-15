@@ -2,13 +2,15 @@ let text = document.querySelector('#text');
 let progress = document.querySelector('#progress');
 let percentage = document.querySelector('#percentage');
 let btn = document.querySelector('button');
+let alert = document.querySelector('#alert');
 
 let seconds = 5;
 let count = 0;
 
-function transferData() {
+function downloadData() {
 
     let downloder = setInterval(function () {
+        text.textContent = 'Downloding...';
         if (count <= 99) {
             count++;
             progress.style.width = `${count}%`;
@@ -19,4 +21,4 @@ function transferData() {
         }
     }, (seconds * 1000) / 100);
 }
-btn.addEventListener('click', transferData);
+btn.addEventListener('click', downloadData);
