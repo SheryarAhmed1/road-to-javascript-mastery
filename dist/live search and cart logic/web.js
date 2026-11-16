@@ -87,7 +87,6 @@ function search() {
 };
 input.addEventListener('input', search);
 
-
 //list of all items
 function all() {
     productList(products);
@@ -98,7 +97,7 @@ btn1.addEventListener('click', all)
 function mobile() {
     let mobileItems = products.filter(function (list) {
         return list.category === 'mobile';
-    })
+    });
     productList(mobileItems);
 }
 btn2.addEventListener('click', mobile);
