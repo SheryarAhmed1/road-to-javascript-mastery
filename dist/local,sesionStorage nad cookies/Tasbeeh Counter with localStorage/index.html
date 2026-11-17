@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+    <link rel="stylesheet" href="../../output.css">
+</head>
+
+<body class="font-serif h-64 w-full">
+
+        <div class="flex justify-center items-center mt-10">
+
+        <div
+            class="flex flex-col justify-center items-center gap-5 w-64 h-80 rounded-2xl text-white bg-[url('./assets/tasbeeh.jpg')] bg-cover bg-center bg-no-repeat">
+
+            <h1 class="font-extrabold text-xl">Tasbeeh Counter</h1>
+            <h1 id="countDisplay" class="font-bold text-2xl">0</h1>
+            <button id="plusBtn"
+                class="bg-green-500 px-5 py-1 rounded-md font-bold cursor-pointer hover:bg-green-400 ">+1 Count</button>
+
+            <button id="resetBtn"
+                class="bg-blue-500 w-28 h-8 rounded-md font-bold cursor-pointer hover:bg-blue-700 flex items-center justify-center gap-2 px-4 overflow-hidden">
+                <span id="resetText" class="transition-opacity duration-500">Reset</span>
+                <span><img src="../../assets/reset.png" alt=""
+                        class="w-6 h-6 transition-transform duration-700 ease-in-out"></span>
+            </button>
+
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
