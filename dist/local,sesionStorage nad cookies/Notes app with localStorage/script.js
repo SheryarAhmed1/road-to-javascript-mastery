@@ -16,6 +16,7 @@ if (getNote) {
     charCount.textContent = 'Characters: ' + noteArea.value.length;
     let savedWords = noteArea.value.trim() === '' ? 0 : noteArea.value.trim().split(/\s+/).length;
     wordCount.textContent = 'Words: ' + savedWords;
+    body.classList.toggle('font-bold');
 
 }
 noteArea.addEventListener('input', function () {
