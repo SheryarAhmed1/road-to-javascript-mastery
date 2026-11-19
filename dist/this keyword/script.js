@@ -154,3 +154,22 @@ function introduce() {
 
 let newFunc = introduce.bind(person1);
 newFunc.call(person2);//output : Ali
+
+// Task 7 — Bank Account System
+let bankAcount = {
+    owner: "Osman",
+    balance: 12500,
+    withdraw: function (amount) {
+        if (this.balance >= amount) {
+            console.log(`${this.owner} remaining balance is ${ this.balance - amount} `);
+        } else {
+            console.log('Insufficient Balance')
+        }
+    }
+}
+let anotherAccount = {
+    owner: 'Ali',
+    balance: 30000,
+}
+
+bankAcount.withdraw.call(anotherAccount, 1000);
