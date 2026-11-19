@@ -54,3 +54,43 @@ const cartItem2 = {
 
 console.log(cartItem1.getTotal()); // 50
 console.log(cartItem2.getTotal()); // 80
+
+
+//this, bind(), call(), apply() Practice 
+
+// Task 1: this
+let users = {
+    name: 'Ali',
+    age: 21.,
+    introduce: function () {
+        console.log(`my name is ${this.name} and I am ${this.age} year old`);
+    }
+}
+users.introduce();
+
+// Task 2: call()
+let person = {
+    name: "Ali",
+    greet: function (city, profession) {
+        console.log(`My name is ${this.name}, I live in ${city} and I am a ${profession}`);
+    }
+};
+
+let anotherPerson = {
+    name: "osman"
+};
+// let a = person.greet;
+
+person.greet.call(anotherPerson, 'Islamabad', 'Developer');
+
+//Task 3: apply()
+let employee = {
+    name: "Ahmed",
+    salary: 50000,
+};
+
+function calculateBonus(bonus, allowance) {
+    console.log(`${this.name} total salary is ${this.salary + bonus + allowance}`);
+}
+
+calculateBonus.apply(employee, [5000, 3000]);
