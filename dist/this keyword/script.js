@@ -176,3 +176,29 @@ let anotherAccount = {
 
 bankAcount.withdraw.apply(anotherAccount, [1000]);
 bankAcount.withdraw.apply(bankAcount, [1000]);
+
+// Task 8 — Method Borrowing
+let data1 = {
+    name: "Ali",
+    age: 22,
+    introduce: function (city) {
+        console.log(`${this.name} is ${this.age} years old and lives in ${city}`);
+    }
+};
+
+let data2 = {
+    name: "Ahmed",
+    age: 25
+};
+
+let data3 = {
+    name: "Sara",
+    age: 21
+};
+
+data1.introduce("Lahore");
+data1.introduce.call(data2 , "Islamabad");
+data1.introduce.apply(data3, ["Karachi"]);
+
+let newdata =  data1.introduce.bind(data3, "Karachi");
+newdata();
