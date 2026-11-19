@@ -94,3 +94,63 @@ function calculateBonus(bonus, allowance) {
 }
 
 calculateBonus.apply(employee, [5000, 3000]);
+
+//Task 4: bind()
+let user1 = {
+    name: "Ahmed"
+};
+
+let user2 = {
+    name: "Sara"
+};
+
+function welcome() {
+    console.log(`Welcome ${this.name}`);
+}
+
+let welcomeAhmed = welcome.bind(user1);
+let welcomeSara = welcome.bind(user2);
+
+welcomeAhmed();
+welcomeSara();
+
+//Task 5 — Employee Management {
+let employee1 = {
+    name: "Ali",
+    salary: 40000
+};
+
+let employee2 = {
+    name: "Ahmed",
+    salary: 60000
+};
+
+function calculateSalary(bonus, allowance) {
+    console.log(`${this.name} has total salary of ${this.salary + bonus + allowance}`);
+}
+
+//using call
+calculateSalary.call(employee1, 5000, 2000);
+
+//using apply 
+calculateSalary.apply(employee2, [10000, 5000]);
+
+//using bind
+let salary = calculateSalary.bind(employee1);
+salary(5000, 5000)
+
+//  }
+
+// Task 6: Logic Building Challenge
+let person1 = {
+    name: "Ali"
+};
+let person2 = {
+    name: "Ahmed"
+};
+function introduce() {
+    console.log(this.name);
+}
+
+let newFunc = introduce.bind(person1);
+newFunc.call(person2);//output : Ali
