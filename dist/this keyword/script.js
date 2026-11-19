@@ -161,7 +161,9 @@ let bankAcount = {
     balance: 12500,
     withdraw: function (amount) {
         if (this.balance >= amount) {
-            console.log(`${this.owner} remaining balance is ${ this.balance - amount} `);
+            console.log(`${this.owner} remaining balance is ${this.balance - amount}`);
+            this.balance -= amount;
+            return this.balance;
         } else {
             console.log('Insufficient Balance')
         }
@@ -172,4 +174,5 @@ let anotherAccount = {
     balance: 30000,
 }
 
-bankAcount.withdraw.call(anotherAccount, 1000);
+bankAcount.withdraw.apply(anotherAccount, [1000]);
+bankAcount.withdraw.apply(bankAcount, [1000]);
