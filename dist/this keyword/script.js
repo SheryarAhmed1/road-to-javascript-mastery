@@ -197,8 +197,35 @@ let data3 = {
 };
 
 data1.introduce("Lahore");
-data1.introduce.call(data2 , "Islamabad");
+data1.introduce.call(data2, "Islamabad");
 data1.introduce.apply(data3, ["Karachi"]);
 
-let newdata =  data1.introduce.bind(data3, "Karachi");
+let newdata = data1.introduce.bind(data3, "Karachi");
 newdata();
+
+//Task 12 — Product Discount System
+let product1 = {
+    name: "Laptop",
+    price: 100000,
+    discount: function (percentage) {
+        let discountAmount = this.price * percentage / 100;
+        let finalPrice = this.price - discountAmount;
+
+        console.log(`${this.name} final price: ${finalPrice}`);
+    }
+};
+
+let product2 = {
+    name: "Mobile",
+    price: 50000
+};
+let product3 = {
+    name: "Tablet",
+    price: 30000
+};
+product1.discount(10);
+product1.discount.call(product2, 20);
+product1.discount.apply(product3, [15]);
+
+let sale = product1.discount.bind(product2, 30);
+sale();
