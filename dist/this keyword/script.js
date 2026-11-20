@@ -203,7 +203,7 @@ data1.introduce.apply(data3, ["Karachi"]);
 let newdata = data1.introduce.bind(data3, "Karachi");
 newdata();
 
-//Task 12 — Product Discount System
+//Task 9 — Product Discount System
 let product1 = {
     name: "Laptop",
     price: 100000,
@@ -229,3 +229,18 @@ product1.discount.apply(product3, [15]);
 
 let sale = product1.discount.bind(product2, 30);
 sale();
+
+// Task 10 — Shipping Cost Calculator
+let customer = {
+    name: "Ali",
+    city: "Islamabad",
+}
+
+function calulateShipping(deliveryType, charges) {
+    console.log(`${this.name}, ${this.city}, ${deliveryType}, ${charges}`);
+}
+
+let result = calulateShipping.bind(customer, "Express");
+customer.city = "Lahore";
+result(300);
+result(500);
