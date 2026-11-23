@@ -67,43 +67,44 @@ account2.showDetails();
 // 🟢 Task 1 — Employee Management System
 
 class Employee {
-  // Constructor to initialize employee properties
-  constructor(name, designation, salary, department) {
-    this.name = name;
-    this.designation = designation;
-    this.salary = salary;
-    this.department = department;
-  }
+    // Constructor to initialize employee properties
+    constructor(name, designation, salary, department) {
+        this.name = name;
+        this.designation = designation;
+        this.salary = salary;
+        this.department = department;
+    }
 
-  // Method to display complete employee details
-  showDetails() {
-    console.log(`Name: ${this.name}`);
-    console.log(`Designation: ${this.designation}`);
-    console.log(`Department: ${this.department}`);
-    console.log(`Monthly Salary: ${this.salary}`);
-    console.log("---------------------------");
-  }
+    // Method to display complete employee details
+    showDetails() {
+        console.log("---------------------------");
+        console.log(`Name: ${this.name}`);
+        console.log(`Designation: ${this.designation}`);
+        console.log(`Department: ${this.department}`);
+        console.log(`Monthly Salary: ${this.salary}`);
+        console.log("---------------------------");
+    }
 
-  // Method to increase the salary by a given amount
-  increaseSalary(amount) {
-    this.salary += amount;
-    console.log(`${this.name}'s salary increased by ${amount}. New Salary: ${this.salary}`);
-  }
+    // Method to increase the salary by a given amount
+    increaseSalary(amount) {
+        this.salary += amount;
+        console.log(`${this.name}'s salary increased by ${amount}. New Salary: ${this.salary}`);
+    }
 
-  // Method to update the employee's designation
-  changeDesignation(newDesignation) {
-    this.designation = newDesignation;
-    console.log(`${this.name}'s designation updated to: ${this.designation}`);
-  }
+    // Method to update the employee's designation
+    changeDesignation(newDesignation) {
+        this.designation = newDesignation;
+        console.log(`${this.name}'s designation updated to: ${this.designation}`);
+    }
 
-  // Method to calculate and return the 12-month annual salary
-  calculateAnnualSalary() {
-    return this.salary * 12;
-  }
+    // Method to calculate and return the 12-month annual salary
+    calculateAnnualSalary() {
+        return this.salary * 12;
+    }
 }
 
 // --- Test Data ---
-const emp1 = new Employee("Ali", "Web Developer", 60000, "IT");
+const emp1 = new Employee("Ali", "Junior Web Developer", 60000, "IT");
 const emp2 = new Employee("Ahmed", "Designer", 45000, "Creative");
 
 // Testing methods on emp1
@@ -117,3 +118,60 @@ console.log("\n");
 // Testing methods on emp2
 emp2.showDetails();
 console.log(`${emp2.name}'s Annual Salary: ${emp2.calculateAnnualSalary()}`);
+console.log('______________________________');
+
+
+//🟢 Task 2 — Shopping Cart System
+
+class ShoppingCart {
+    constructor(customerName, items) {
+        customerName = customerName;
+        this.items = [];
+    }
+    addItem(name, price, quantity) {
+        this.items.push({
+            name: name,
+            price: price,
+            quantity: quantity,
+        });
+    }
+    removeItem(name) {
+    let index = this.items.findIndex(function(product) {
+        return product.name === name;
+    });
+
+    if (index !== -1) {
+        this.items.splice(index, 1);
+        console.log(`${name} removed from cart.`);
+    } else {
+        console.log(`${name} not found in cart.`);
+    }
+}
+    calculateTotal() {
+        let total = 0;
+        for (let i = 0; i < this.items.length; i++) {
+            total += this.items[i].price * this.items[i].quantity;
+        }
+        return total;
+    }
+    showCart() {
+        this.items.forEach(function (product) {
+            console.log(`Name: ${product.name}`);
+            console.log(`Price: ${product.price}`);
+            console.log(`Quantity: ${product.quantity}`);
+        });
+    }
+}
+let productsOne = new ShoppingCart('Habib');
+let productsTwo = new ShoppingCart('mohsin');
+
+productsOne.addItem('Water Bottle', 100, 3);
+productsOne.addItem('Eggs', 20, 5);
+productsOne.removeItem('Eggs')
+productsOne.showCart()
+console.log(productsOne.calculateTotal());
+
+
+productsTwo.addItem('Bread', 150, 8);
+productsTwo.showCart();
+console.log(productsTwo.calculateTotal());
