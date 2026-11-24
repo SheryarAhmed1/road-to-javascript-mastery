@@ -41,3 +41,30 @@ function fetchUserProfile(session) {
 
 // Start the async workflow
 authenticateUser('ali_dev', fetchUserProfile);
+
+//Creating a New Promise
+const orderProduct = new Promise((resolve, reject) => {
+    const success = true;
+    if (success) {
+        resolve('Your request Accepted');
+    } else {
+        reject('Your request is Rejected');
+    }
+});
+
+console.log(orderProduct);
+
+//Asynchronous Javascript Practice
+//Task 1:
+function downloadFile(fileName, callback) {
+    console.log("Downloading Start...");
+
+    setTimeout(() => {
+        console.log('File Downloaded: ' + fileName);
+        callback('Now File is Opening...');
+    }, 3000);
+}
+
+downloadFile("notes.pdf", (message) => {
+    console.log(message);
+});
