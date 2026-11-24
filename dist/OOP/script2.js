@@ -4,7 +4,7 @@ class Employee {
         this.baseSalary = baseSalary;
     }
     getDetails() {
-        return `Employee Name: ${this.name}, Base Salary: $${this.baseSalary}`;
+        return `Employee Name: ${this.name}, Base Salary: ${this.baseSalary}`;
     }
 }
 
