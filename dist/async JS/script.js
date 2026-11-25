@@ -1,26 +1,26 @@
-//Async JS 
+/*// Async JS 
 console.log('Start');
 
 setTimeout(() => {
-    console.log('Aynchrounous');
+    console.log('Asynchronous');
 }, 2000);
 
 console.log('End');
 
-//Callback Function
-function sayHello(name, sayBaye) {
+// Callback Function
+function sayHello(name, sayBye) {
     console.log('Hey ' + name);
-    sayBaye();  //here callback is callingF
+    sayBye(); // here callback is called
 }
+
 sayHello('Ali', () => {
-    console.log('Welcome to Javascript');
+    console.log('Welcome to JavaScript');
 });
 
-/**
- * Simulates an asynchronous user authentication and profile fetching workflow
- * using JavaScript callbacks.
- */
 
+//  Simulates an asynchronous user authentication and profile fetching workflow
+//  using JavaScript callbacks.
+ 
 function authenticateUser(username, callback) {
     console.log(`Authenticating user: ${username}...`);
 
@@ -42,7 +42,7 @@ function fetchUserProfile(session) {
 // Start the async workflow
 authenticateUser('ali_dev', fetchUserProfile);
 
-//Creating a New Promise
+// Creating a New Promise
 const orderProduct = new Promise((resolve, reject) => {
     const success = true;
     if (success) {
@@ -54,11 +54,11 @@ const orderProduct = new Promise((resolve, reject) => {
 
 console.log(orderProduct);
 
-//Asynchronous Javascript Practice
-//Task 1:
+// Asynchronous JavaScript Practice
+// Task 1:
 function downloadFile(fileName, callback) {
     console.log("Downloading Start...");
-
+    
     setTimeout(() => {
         console.log('File Downloaded: ' + fileName);
         callback('Now File is Opening...');
@@ -68,3 +68,14 @@ function downloadFile(fileName, callback) {
 downloadFile("notes.pdf", (message) => {
     console.log(message);
 });
+*/
+
+// Task 2:
+async function getJoke() {
+    const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode');
+    const data = await response.json();
+    // console.log(data);
+    console.log('Question: ' + data.setup);
+    console.log('Punchline: ' + data.delivery);
+}
+getJoke();

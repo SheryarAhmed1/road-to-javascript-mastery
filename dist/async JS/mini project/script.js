@@ -18,10 +18,9 @@ function createElement(tag, className, text) {
 function showMessage(message, isError = false) {
     const panel = createElement(
         "div",
-        `rounded-xl border px-6 py-8 text-center shadow-sm ${
-            isError
-                ? "border-red-200 bg-red-50"
-                : "border-gray-200 bg-white"
+        `rounded-xl border px-6 py-8 text-center shadow-sm ${isError
+            ? "border-red-200 bg-red-50"
+            : "border-gray-200 bg-white"
         }`
     );
     const title = createElement(
