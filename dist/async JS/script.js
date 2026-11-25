@@ -36,7 +36,7 @@ function fetchUserProfile(session) {
 
     setTimeout(() => {
         console.log(`Profile loaded! Welcome back, ${session.username} (${session.role}).`);
-    }, 2000);
+    }, 1000);
 }
 
 // Start the async workflow
