@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmos Weather App</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../../../output.css">
+    <link rel="icon" href="../../../assets/weather.png">
+
+    <style>
+        body {
+            background: #080f1e;
+            font-family: Arial, sans-serif;
+        }
+
+        .weather-bg {
+            background: linear-gradient(135deg, #172b4d, #101b32);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+
+        .loader {
+            width: 22px;
+            height: 22px;
+            border: 3px solid #ffffff40;
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .weather-card {
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-white px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-10">
+
+            <div>
+                <h1 class="text-2xl font-bold tracking-wide">
+                    ☁ Atmos
+                </h1>
+
+                <p class="text-slate-400 text-sm mt-1">
+                    Weather, wherever you are.
+                </p>
+            </div>
+
+            <div class="text-sm text-slate-400">
+                LIVE WEATHER
+                <span class="inline-block w-2 h-2 bg-green-400 rounded-full ml-1"></span>
+            </div>
+
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="mb-8">
+
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+                Discover the weather.
+            </h2>
+
+            <p class="text-slate-400 mb-6">
+                Enter a city name to explore its current weather conditions.
+            </p>
+
+            <form id="searchForm" class="flex flex-col sm:flex-row gap-3">
+
+                <div class="relative flex-1">
+
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2">
+                        🔍
+                    </span>
+
+                    <input type="text" id="cityInput" placeholder="Search city e.g. Islamabad..."
+                        class="w-full bg-slate-800 border border-slate-700 rounded-xl py-4 pl-12 pr-4 outline-none focus:border-blue-400 transition">
+
+                </div>
+
+                <button type="submit" id="searchBtn"
+                    class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl font-semibold transition flex justify-center items-center gap-2">
+                    <span id="btnText">Search Weather</span>
+                    <span id="loader" class="loader hidden"></span>
+                </button>
+
+            </form>
+
+            <!-- Quick Cities -->
+            <div class="flex flex-wrap gap-2 mt-5 items-center">
+
+                <span class="text-slate-500 text-sm mr-1">
+                    Quick search:
+                </span>
+
+                <button class="city-btn" data-city="Islamabad">Islamabad</button>
+                <button class="city-btn" data-city="London">London</button>
+                <button class="city-btn" data-city="Dubai">Dubai</button>
+                <button class="city-btn" data-city="Tokyo">Tokyo</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="hidden bg-red-500/10 border border-red-500/30 text-red-300 rounded-xl p-4 mb-6">
+        </div>
+
+
+        <!-- Weather Content -->
+        <main id="weatherContainer" class="hidden">
+
+            <!-- Main Weather Card -->
+            <section class="weather-bg rounded-3xl p-6 sm:p-8 mb-5 weather-card">
+
+                <div class="flex justify-between items-start gap-3">
+
+                    <div>
+                        <p class="text-blue-200 text-sm mb-2">
+                            CURRENT WEATHER
+                        </p>
+
+                        <h2 id="cityName" class="text-2xl sm:text-3xl font-bold">
+                            Islamabad
+                        </h2>
+
+                        <p id="regionName" class="text-slate-300 text-sm mt-1">
+                            Pakistan
+                        </p>
+                    </div>
+
+                    <!-- Temperature Toggle -->
+                    <div class="glass rounded-full p-1 flex gap-1">
+
+                        <button id="celsiusBtn" class="px-3 py-1.5 rounded-full bg-blue-600 text-sm">
+                            °C
+                        </button>
+
+                        <button id="fahrenheitBtn" class="px-3 py-1.5 rounded-full text-sm text-slate-300">
+                            °F
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Temperature -->
+                <div class="flex items-center justify-between mt-10">
+
+                    <div>
+
+                        <h1 class="text-6xl sm:text-7xl font-bold tracking-tight">
+                            <span id="temperature">--</span><span id="unit">°C</span>
+                        </h1>
+
+                        <p id="condition" class="text-blue-200 text-lg mt-3">
+                            Clear
+                        </p>
+
+                        <p class="text-slate-300 text-sm mt-2">
+                            Feels like
+                            <span id="feelsLike">--</span>°
+                        </p>
+
+                    </div>
+
+                    <div class="text-center">
+
+                        <img id="weatherIcon" src="" alt="Weather icon"
+                            class="w-28 sm:w-36 h-28 sm:h-36 object-contain">
+
+                    </div>
+
+                </div>
+
+
+                <div class="border-t border-white/10 mt-8 pt-5 flex justify-between flex-wrap gap-3 text-sm">
+
+                    <p class="text-slate-300">
+                        📅 Local Time:
+                        <span id="localTime" class="text-white"></span>
+                    </p>
+
+                    <p class="text-slate-300">
+                        Updated:
+                        <span id="lastUpdated" class="text-white"></span>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Weather Details -->
+            <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-slate-400 text-sm">💧 Humidity</p>
+                    <h3 id="humidity" class="text-2xl font-bold mt-3">--</h3>
+                    <p class="text-slate-500 text-xs mt-1">Moisture level</p>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-slate-400 text-sm">💨 Wind Speed</p>
+                    <h3 id="wind" class="text-2xl font-bold mt-3">--</h3>
+                    <p class="text-slate-500 text-xs mt-1">Kilometers/hour</p>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-slate-400 text-sm">☀ UV Index</p>
+                    <h3 id="uv" class="text-2xl font-bold mt-3">--</h3>
+                    <p class="text-slate-500 text-xs mt-1">UV intensity</p>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-slate-400 text-sm">🌡 Pressure</p>
+                    <h3 id="pressure" class="text-2xl font-bold mt-3">--</h3>
+                    <p class="text-slate-500 text-xs mt-1">Millibars</p>
+                </div>
+
+            </section>
+
+
+            <!-- Air Quality -->
+            <section class="glass rounded-2xl p-6 mb-5">
+
+                <div class="flex justify-between items-center flex-wrap gap-3">
+
+                    <div>
+                        <p class="text-slate-400 text-sm">AIR QUALITY INDEX</p>
+
+                        <h2 id="aqiValue" class="text-3xl font-bold mt-2">
+                            --
+                        </h2>
+                    </div>
+
+                    <div class="text-right">
+                        <span id="aqiStatus" class="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm">
+                            Good
+                        </span>
+
+                        <p class="text-slate-500 text-xs mt-3">
+                            US EPA Air Quality Index
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Empty State -->
+        <div id="emptyState" class="text-center py-14 glass rounded-3xl">
+
+            <div class="text-5xl mb-4">🌤️</div>
+
+            <h3 class="text-xl font-semibold">
+                Your weather starts here
+            </h3>
+
+            <p class="text-slate-400 text-sm mt-2">
+                Search for a city to discover its weather.
+            </p>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-600 text-xs mt-12">
+            Powered by WeatherAPI.com · Built with ❤️
+        </footer>
+
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
