@@ -87,7 +87,6 @@ getJoke();
 
 
 //Random User Profile Generator
-
 const API_URL = "https://fakestoreapi.noksha.dev/api/users";
 
 const usersContainer = document.querySelector("#usersContainer");

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos Gallery</title>
+
+    <link rel="stylesheet" href="../../output.css">
+</head>
+
+<body class="bg-slate-100 min-h-screen">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-800">
+                Photos Gallery
+            </h1>
+
+            <p class="text-slate-500 mt-2">
+                Explore beautiful photos
+            </p>
+        </header>
+        <!-- Total Photos -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 mb-8">
+            <p class="text-sm text-slate-500">Total Photos</p>
+
+            <h2 id="galleryTotalCount" class="text-2xl font-bold text-indigo-600">
+                0
+            </h2>
+        </div>
+        <!-- Loading -->
+        <div id="galleryLoadingState" class="text-center text-slate-500 py-10">
+            Loading photos...
+        </div>
+        <!-- Error -->
+        <div id="galleryErrorMessage" class="hidden text-center text-red-500 py-10">
+            Failed to load photos.
+        </div>
+        <!-- Gallery Container -->
+        <div id="galleryCardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- Single Image Card (Template Example) -->
+            <div
+                class="gallery-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+
+                <!-- Image -->
+                <div class="h-64 overflow-hidden">
+                    <img src="" alt="Gallery Image"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+
+                <!-- Image Title -->
+                <div class="p-4">
+                    <h2 class="text-sm font-semibold text-slate-700">
+                        Image Title
+                    </h2>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="fetch.js"></script>
+
+</body>
+
+</html>

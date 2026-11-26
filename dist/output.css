@@ -1377,6 +1377,9 @@
     --tw-gradient-to: var(--color-violet-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .bg-contain {
+    background-size: contain;
+  }
   .bg-cover {
     background-size: cover;
   }
@@ -2170,6 +2173,11 @@
     }
     .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
