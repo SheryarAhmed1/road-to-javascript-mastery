@@ -4,15 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Dashboard</title>
+    <!-- Favicon -->
     <link rel="icon" href="../assets/js.png">
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../output.css">
-    <title>Async Javascript</title>
 </head>
 
-<body>
-    <h1 class="text-center text-3xl font-serif p-10">Async Javascript</h1>
+<body class="bg-slate-100 min-h-screen">
 
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10">
+
+            <div>
+                <h1 class="text-3xl font-bold text-slate-800">
+                    Users Dashboard
+                </h1>
+
+                <p class="text-slate-500 mt-1">
+                    Manage and view all users
+                </p>
+            </div>
+
+            <!-- Total Users -->
+            <div class="bg-white px-6 py-4 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-sm text-slate-500">Total Users</p>
+
+                <h2 id="totalUsers" class="text-2xl font-bold text-indigo-600">
+                    0
+                </h2>
+            </div>
+
+        </header>
+
+        <!-- Loading -->
+        <div id="loading" class="text-center text-slate-500 py-10">
+            Loading users...
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="hidden text-center text-red-500 py-10">
+            Failed to load users.
+        </div>
+
+        <!-- Users Cards -->
+        <div id="usersContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 
 </html>
